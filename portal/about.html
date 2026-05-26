@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АСУ Теплоснабжение – О системе</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo"><span>🔥</span> АСУ Теплоснабжение</div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="monitoring.html">Мониторинг</a>
+                <a href="dashboard.html">Дашборд</a>
+                <a href="about.html">О системе</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero" style="padding:40px 20px;">
+        <h1>О системе АСУ «Теплоснабжение»</h1>
+        <p>Архитектура, технологии и команда разработки</p>
+    </div>
+
+    <div class="section observe">
+        <h2 class="section-title">Архитектура системы</h2>
+        <p class="section-subtitle">Трёхуровневая архитектура на базе виртуализации Oracle VirtualBox</p>
+        <div class="cards">
+            <div class="card">
+                <div class="card-icon">🖥️</div>
+                <h3>Сервер приложений</h3>
+                <p>VM1-Server — Ubuntu Server 22.04, FastAPI + PostgreSQL 17. Обрабатывает запросы REST API и хранит данные.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">👤</div>
+                <h3>Рабочее место диспетчера</h3>
+                <p>VM2-Dispatcher — Ubuntu Desktop 22.04. Доступ к мониторингу и управлению через веб-интерфейс.</p>
+            </div>
+            <div class="card">
+                <div class="card-icon">🔧</div>
+                <h3>Рабочее место администратора</h3>
+                <p>VM3-Admin — Ubuntu Desktop 22.04. Администрирование БД и анализ данных через DBeaver.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="section observe" style="background:#eaf2f8;border-radius:12px;margin-bottom:40px;max-width:1200px;">
+        <h2 class="section-title text-center">Стек технологий</h2>
+        <div class="cards">
+            <div class="card"><div class="card-icon">🐍</div><h3>Python 3.11 + FastAPI</h3><p>Асинхронный веб-фреймворк для построения высокопроизводительного REST API.</p></div>
+            <div class="card"><div class="card-icon">🗄️</div><h3>PostgreSQL 17</h3><p>Реляционная база данных для хранения информации об абонентах и показаниях.</p></div>
+            <div class="card"><div class="card-icon">📊</div><h3>HTML5 + CSS3 + JavaScript</h3><p>Клиентский веб-интерфейс с адаптивным дизайном и динамической визуализацией.</p></div>
+            <div class="card"><div class="card-icon">🔧</div><h3>Oracle VirtualBox 7</h3><p>Среда виртуализации для развёртывания многомашинного стенда АСУ.</p></div>
+        </div>
+    </div>
+
+    <div class="section observe">
+        <h2 class="section-title text-center">API Эндпоинты</h2>
+        <div class="table-wrapper">
+            <table>
+                <thead><tr><th>Метод</th><th>Путь</th><th>Описание</th></tr></thead>
+                <tbody>
+                    <tr><td><span class="badge badge-success">GET</span></td><td>/api/v1/consumers</td><td>Список всех абонентов</td></tr>
+                    <tr><td><span class="badge badge-success">GET</span></td><td>/api/v1/consumers/{id}</td><td>Информация об абоненте</td></tr>
+                    <tr><td><span class="badge badge-warning">POST</span></td><td>/api/v1/consumers</td><td>Добавление нового абонента</td></tr>
+                    <tr><td><span class="badge badge-success">GET</span></td><td>/api/v1/readings</td><td>Список показаний</td></tr>
+                    <tr><td><span class="badge badge-warning">POST</span></td><td>/api/v1/readings</td><td>Добавление показаний</td></tr>
+                    <tr><td><span class="badge badge-success">GET</span></td><td>/api/v1/reports/balance</td><td>Тепловой баланс за период</td></tr>
+                    <tr><td><span class="badge badge-warning">POST</span></td><td>/api/v1/reports/generate-act</td><td>Скачать акт (DOCX)</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 АСУ «Теплоснабжение» — РТУ МИРЭА, ИИТ, кафедра ИТАЭ</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>АСУ Теплоснабжение – Мониторинг</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <div class="logo"><span>🔥</span> АСУ Теплоснабжение</div>
+            <nav>
+                <a href="index.html">Главная</a>
+                <a href="monitoring.html">Мониторинг</a>
+                <a href="dashboard.html">Дашборд</a>
+                <a href="about.html">О системе</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="hero" style="padding:40px 20px;">
+        <h1>Мониторинг теплоснабжения</h1>
+        <p>Сводка по абонентам и показаниям приборов учёта</p>
+    </div>
+
+    <div class="section" id="monitoring-content">
+        <div class="loading">Загрузка данных...</div>
+    </div>
+
+    <footer>
+        <p>© 2026 АСУ «Теплоснабжение» — РТУ МИРЭА, ИИТ, кафедра ИТАЭ</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>loadMonitoring();</script>
+</body>
+</html>
